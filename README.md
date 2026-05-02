@@ -1,3 +1,18 @@
+# MedAuth Sentinel  
+### Autonomous Prior Authorization & Appeals Agent
+
+> Veersa Hackathon 2026 — ABES Batch of 2027  
+
+---
+
+## 🚀 Overview
+
+Prior authorization delays cost billions and slow down patient care.  
+**MedAuth Sentinel** automates this process using AI agents that review requests in seconds — with full reasoning transparency.
+
+---
+
+## 🤖 3-Agent Pipeline
 
 - **IntakeAgent** → Validates request data  
 - **DecisionAgent** → Applies medical + policy rules  
