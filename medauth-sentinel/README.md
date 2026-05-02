@@ -16,11 +16,9 @@
 - [Running Tests](#running-tests)
 - [Demo Scenarios](#demo-scenarios)
 - [Prompt Studio](#prompt-studio)
-- [Deployment](#deployment)
-- [Docker](#docker)
 - [API Reference](#api-reference)
 - [System Design](#system-design)
-- [Team](#team)
+
 
 ---
 
