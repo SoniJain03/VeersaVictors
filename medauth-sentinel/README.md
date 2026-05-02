@@ -285,71 +285,6 @@ This feature lets judges modify agent behavior live during evaluation — a core
 
 ---
 
-## Deployment
-
-### Live Links
-
-| Service | URL |
-|---------|-----|
-| **Working Application** | https://medauth-sentinel.vercel.app |
-| **Backend API Docs** | https://medauth-sentinel-backend.onrender.com/docs |
-| **GitHub Repository** | https://github.com/your-team/medauth-sentinel |
-
-> **Note:** Backend runs on Render free tier. First request after inactivity takes ~30 seconds to wake up. The UI shows a banner while this happens. Subsequent requests are instant.
-
-### Deploy Backend to Render
-
-```bash
-# 1. Push to GitHub
-git add . && git commit -m "deploy" && git push
-
-# 2. Go to render.com → New Web Service
-# Connect your GitHub repo
-# Settings:
-#   Build Command: pip install -r requirements.txt
-#   Start Command: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
-#   Environment Variable: GROQ_API_KEY = your_key
-
-# 3. Copy your Render URL:
-# https://medauth-sentinel-backend.onrender.com
-```
-
-### Deploy Frontend to Vercel
-
-```bash
-# 1. Go to vercel.com → Add New Project
-# Import your GitHub repo
-# Settings:
-#   Root Directory: frontend
-#   Framework: Create React App
-#   Environment Variable: REACT_APP_API_URL = https://medauth-sentinel-backend.onrender.com
-
-# 2. Deploy → get URL:
-# https://medauth-sentinel.vercel.app
-```
-
----
-
-## Docker
-
-Run the entire stack with one command:
-
-```bash
-# Build and start everything
-docker-compose up --build
-
-# Frontend: http://localhost:3000
-# Backend:  http://localhost:8000
-# API Docs: http://localhost:8000/docs
-
-# Stop
-docker-compose down
-```
-
-Make sure your `.env` file has `GROQ_API_KEY` set before running Docker.
-
----
-
 ## API Reference
 
 ### POST /api/submit-request
@@ -470,13 +405,6 @@ git log --all --full-history -- .env
 
 ---
 
-## Team
-
-| Name | Role | Owns |
-|------|------|------|
-| [Member 1] | Orchestrator + Agents | `orchestrator.py`, `agents/`, `prompts/` |
-| [Member 2] | Data + Tools + Tests | `data/`, `tools/`, `tests/` |
-| [Member 3] | Frontend + API + DevOps | `frontend/`, `main.py`, Docker, README |
 
 **ABES Engineering College — Batch of 2027**  
 **Veersa Hackathon 2026**
