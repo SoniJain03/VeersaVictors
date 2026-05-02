@@ -111,8 +111,7 @@ The self-critique loop (DecisionAgent → CriticAgent → DecisionAgent revised)
 | Data | JSON files | Transparent, portable, no DB setup |
 | Orchestration | Hand-rolled Python | Full code ownership, explainable line by line |
 | Testing | pytest + REST Client | Unit + API testing (2 types as required) |
-| Deployment | Render (backend) + Vercel (frontend) | Free tier, no sleep issues |
-| Container | Docker + docker-compose | Bonus points, one-command startup |
+
 
 ---
 
